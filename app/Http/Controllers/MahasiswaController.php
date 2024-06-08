@@ -60,7 +60,7 @@ class MahasiswaController extends Controller
         {
             $nama_file = $request->foto->getClientoriginalName();
             $data['foto'] = $nama_file;
-            $request->file(foto)->move('storage/foto/',$nama_file);
+            $request->file('foto')->move('storage/foto/',$nama_file);
         }
 
         $mahasiswa->update($data);
